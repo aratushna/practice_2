@@ -129,10 +129,10 @@ namespace Kse.Algorithms.Samples
 
         private void AddTraffic(int seed)
         {
-            var next = GetNextEmpty(); // Получаем координаты следующей пустой точки (Space " ")
+            var next = GetNextEmpty(); // ГЏГ®Г«ГіГ·Г ГҐГ¬ ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ» Г±Г«ГҐГ¤ГіГѕГ№ГҐГ© ГЇГіГ±ГІГ®Г© ГІГ®Г·ГЄГЁ (Space " ")
 
             var trafficRandom = new Random(options.TrafficSeed);
-            while (next.HasValue) // цикл работает пока не будет null
+            while (next.HasValue) // Г¶ГЁГЄГ« Г°Г ГЎГ®ГІГ ГҐГІ ГЇГ®ГЄГ  Г­ГҐ ГЎГіГ¤ГҐГІ null
             {
 
                 PaintTrafficDfs(next.Value, trafficRandom.Next(50, 130), trafficRandom.Next(1, 10));
@@ -160,11 +160,11 @@ namespace Kse.Algorithms.Samples
             {
                 var visited = new List<Point>();
                 var stack = new Stack<Point>();
-                stack.Push(point); // Добавляем в стек, добавляем сверху
+                stack.Push(point); // Г„Г®ГЎГ ГўГ«ГїГҐГ¬ Гў Г±ГІГҐГЄ, Г¤Г®ГЎГ ГўГ«ГїГҐГ¬ Г±ГўГҐГ°ГµГі
        
                 while (stack.Count > 0 && depth > 0)
                 {
-                    var next = stack.Pop(); // Получаем элемент и сразу удаляем элемент из стека
+                    var next = stack.Pop(); // ГЏГ®Г«ГіГ·Г ГҐГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІ ГЁ Г±Г°Г Г§Гі ГіГ¤Г Г«ГїГҐГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІ ГЁГ§ Г±ГІГҐГЄГ 
                     
                     if (visited.Contains(next))
                     {
@@ -184,7 +184,7 @@ namespace Kse.Algorithms.Samples
                      
                         maze[point.Column, point.Row] = value.ToString();
                         
-                        depth -= 1; // В -= A эквивалентно B = B - A
+                        depth -= 1; // Г‚ -= A ГЅГЄГўГЁГўГ Г«ГҐГ­ГІГ­Г® B = B - A
                         visited.Add(point);
                     }
                 }
@@ -203,7 +203,7 @@ namespace Kse.Algorithms.Samples
             TryAddWithOffset(0, -offset);
             return result; 
 
-            void TryAddWithOffset(int offsetX, int offsetY) // передаем смещения по x,y 
+            void TryAddWithOffset(int offsetX, int offsetY) // ГЇГҐГ°ГҐГ¤Г ГҐГ¬ Г±Г¬ГҐГ№ГҐГ­ГЁГї ГЇГ® x,y 
             { 
                 var newColumn = column + offsetX;
                 var newRow = row + offsetY;
