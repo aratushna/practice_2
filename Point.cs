@@ -1,7 +1,6 @@
 
 namespace Kse.Algorithms.Samples
 {
-    // Структура Point - колонка/строка
     public struct Point
     {
         public int Column { get;}
