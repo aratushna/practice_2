@@ -43,7 +43,7 @@ namespace Kse.Algorithms.Samples
                         }
                     }
                     Console.Write(maze[column, row]);
-                    Console.ResetColor(); // сбрасываем цвет на стандартный
+                    Console.ResetColor(); // Г±ГЎГ°Г Г±Г»ГўГ ГҐГ¬ Г¶ГўГҐГІ Г­Г  Г±ГІГ Г­Г¤Г Г°ГІГ­Г»Г©
                     
                 }
                 Console.WriteLine();
