@@ -43,7 +43,7 @@ namespace Kse.Algorithms.Samples
                         }
                     }
                     Console.Write(maze[column, row]);
-                    Console.ResetColor(); // ñáðàñûâàåì öâåò íà ñòàíäàðòíûé
+                    Console.ResetColor();
                     
                 }
                 Console.WriteLine();
