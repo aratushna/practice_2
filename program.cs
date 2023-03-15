@@ -90,7 +90,7 @@ for (var row = 0; row < map.GetLength(1); row++)
     }
 
 
-def_search(start); // Процедура описана выше
+def_search(start); // ГЏГ°Г®Г¶ГҐГ¤ГіГ°Г  Г®ГЇГЁГ±Г Г­Г  ГўГ»ГёГҐ
 
 
 List<Point> shortest_path = new List<Point>();
@@ -106,15 +106,15 @@ Point min_point = new Point();
             var neighbours = generator.GetNeighbours(i_point.Column, i_point.Row, map, 1, true);
             
             foreach (var neighbour in neighbours)
-                if (distances[neighbour] == 1 | distances[neighbour] == 2) // не работает <=2 , заменил на 2 оператора ==
+                if (distances[neighbour] == 1 | distances[neighbour] == 2) // Г­ГҐ Г°Г ГЎГ®ГІГ ГҐГІ <=2 , Г§Г Г¬ГҐГ­ГЁГ« Г­Г  2 Г®ГЇГҐГ°Г ГІГ®Г°Г  ==
                 {
-                    shortest_path.Add(neighbour); // Добавляем посл.точку в список и выходим
+                    shortest_path.Add(neighbour); // Г„Г®ГЎГ ГўГ«ГїГҐГ¬ ГЇГ®Г±Г«.ГІГ®Г·ГЄГі Гў Г±ГЇГЁГ±Г®ГЄ ГЁ ГўГ»ГµГ®Г¤ГЁГ¬
                     return;
                 }
 
             foreach (var neighbour in neighbours)
             {
-                if ((min_distance == 0 | min_distance >= distances[neighbour]) & distances[neighbour] > 0) // находим минимальное расстояние
+                if ((min_distance == 0 | min_distance >= distances[neighbour]) & distances[neighbour] > 0) // Г­Г ГµГ®Г¤ГЁГ¬ Г¬ГЁГ­ГЁГ¬Г Г«ГјГ­Г®ГҐ Г°Г Г±Г±ГІГ®ГїГ­ГЁГҐ
                 {
 
                     min_distance = distances[neighbour];
